@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20F53AD0-2C8C-479B-9B44-47801E155F75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPMAC_for_Femap</RootNamespace>
+    <AssemblyName>SPMAC for Femap</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikData, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Analysis\OutputResults.cs" />
+    <Compile Include="Classes\DB\DBController.cs" />
+    <Compile Include="Classes\DB\DBServerContext.cs" />
+    <Compile Include="Classes\DB\Model\DBDetailsSet.cs" />
+    <Compile Include="Classes\Details\ICancelModelling.cs" />
+    <Compile Include="Classes\Analysis\AnalysisProperty.cs" />
+    <Compile Include="Classes\Assembly\Assembly.cs" />
+    <Compile Include="Classes\Analysis\ConstraintsOnModel.cs" />
+    <Compile Include="Classes\Analysis\LoadOnModel.cs" />
+    <Compile Include="Classes\OutputDataToWord.cs" />
+    <Compile Include="Classes\SerializeXML.cs" />
+    <Compile Include="Classes\Details\Sizes.cs" />
+    <Compile Include="Classes\Status.cs" />
+    <Compile Include="Classes\SyncGUI.cs" />
+    <Compile Include="Forms\Analysis\ConstraintForm.cs" />
+    <Compile Include="Forms\Analysis\ConstraintForm.Designer.cs">
+      <DependentUpon>ConstraintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analysis\FEAForm.cs" />
+    <Compile Include="Forms\Analysis\FEAForm.Designer.cs">
+      <DependentUpon>FEAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analysis\LoadOnModelForm.cs" />
+    <Compile Include="Forms\Analysis\LoadOnModelForm.Designer.cs">
+      <DependentUpon>LoadOnModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analysis\MaterialPropertyForm.cs" />
+    <Compile Include="Forms\Analysis\MaterialPropertyForm.Designer.cs">
+      <DependentUpon>MaterialPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Assembly\AssemblyForm.cs" />
+    <Compile Include="Forms\Assembly\AssemblyForm.Designer.cs">
+      <DependentUpon>AssemblyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\CylinderSleeveForm.cs" />
+    <Compile Include="Forms\Details\CylinderSleeveForm.Designer.cs">
+      <DependentUpon>CylinderSleeveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\PistonFingerForm.cs" />
+    <Compile Include="Forms\Details\PistonFingerForm.Designer.cs">
+      <DependentUpon>PistonFingerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\СrankshaftForm.cs" />
+    <Compile Include="Forms\Details\СrankshaftForm.Designer.cs">
+      <DependentUpon>СrankshaftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Output\BestResultForm.cs" />
+    <Compile Include="Forms\Output\BestResultForm.Designer.cs">
+      <DependentUpon>BestResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Output\OutputForm.cs" />
+    <Compile Include="Forms\Output\OutputForm.Designer.cs">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Output\SelectDetailsForm.cs" />
+    <Compile Include="Forms\Output\SelectDetailsForm.Designer.cs">
+      <DependentUpon>SelectDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Details\MakeDetails.cs" />
+    <Compile Include="Classes\Analysis\MaterialProperties.cs" />
+    <Compile Include="Classes\Analysis\MeshingObject.cs" />
+    <Compile Include="Classes\Analysis\ObjectProperties.cs" />
+    <Compile Include="Forms\Details\ParamConnectingRodForm.cs" />
+    <Compile Include="Forms\Details\ParamConnectingRodForm.Designer.cs">
+      <DependentUpon>ParamConnectingRodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\ParamPistonForm.cs" />
+    <Compile Include="Forms\Details\ParamPistonForm.Designer.cs">
+      <DependentUpon>ParamPistonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Analysis\AnalysisForm.cs" />
+    <Compile Include="Forms\Analysis\AnalysisForm.Designer.cs">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\RodCoverForm.cs" />
+    <Compile Include="Forms\Details\RodCoverForm.Designer.cs">
+      <DependentUpon>RodCoverForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Analysis\ConstraintForm.resx">
+      <DependentUpon>ConstraintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analysis\FEAForm.resx">
+      <DependentUpon>FEAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analysis\LoadOnModelForm.resx">
+      <DependentUpon>LoadOnModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analysis\MaterialPropertyForm.resx">
+      <DependentUpon>MaterialPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Assembly\AssemblyForm.resx">
+      <DependentUpon>AssemblyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\CylinderSleeveForm.resx">
+      <DependentUpon>CylinderSleeveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\PistonFingerForm.resx">
+      <DependentUpon>PistonFingerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\RodCoverForm.resx">
+      <DependentUpon>RodCoverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\СrankshaftForm.resx">
+      <DependentUpon>СrankshaftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Output\BestResultForm.resx">
+      <DependentUpon>BestResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Output\OutputForm.resx">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Output\SelectDetailsForm.resx">
+      <DependentUpon>SelectDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\ParamConnectingRodForm.resx">
+      <DependentUpon>ParamConnectingRodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\ParamPistonForm.resx">
+      <DependentUpon>ParamPistonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analysis\AnalysisForm.resx">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SPMAC_for_Femap.Classes.DB.Model.DBAnalysis.datasource" />
+    <None Include="Properties\DataSources\SPMAC_for_Femap.Classes.DB.Model.DBDetailsSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="femap">
+      <Guid>{08F336B3-E668-11D4-9441-001083FFF11C}</Guid>
+      <VersionMajor>11</VersionMajor>
+      <VersionMinor>12</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FALL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WARNING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WAIT315.png" />
+    <None Include="Resources\WAIT225.png" />
+    <None Include="Resources\WAIT135.png" />
+    <None Include="Resources\WAIT45.png" />
+    <None Include="Resources\WAIT270.png" />
+    <None Include="Resources\WAIT180.png" />
+    <None Include="Resources\WAIT90.png" />
+    <None Include="Resources\WAIT0.png" />
+    <None Include="Resources\SAVEDB.png" />
+    <None Include="Resources\COVERROD.png" />
+    <None Include="Resources\FINGER.png" />
+    <None Include="Resources\PISTON.png" />
+    <None Include="Resources\ASSY.png" />
+    <None Include="Resources\ASSEMBLY.png" />
+    <None Include="Resources\DataTable.png" />
+    <None Include="Resources\DataTable.bmp" />
+    <None Include="Resources\REFRESH.png" />
+    <None Include="Resources\DETAIL.png" />
+    <None Include="Resources\DATA.png" />
+    <None Include="Resources\COMPAREANALYSIS.png" />
+    <None Include="Resources\MATERIAL.png" />
+    <None Include="Resources\MATERIALITEM.png" />
+    <None Include="Resources\ANALYSIS.png" />
+    <None Include="Resources\ANALYSISITEM.png" />
+    <None Include="Resources\LOAD.png" />
+    <None Include="Resources\LOADITEM.png" />
+    <None Include="Resources\CONSTRAINT.png" />
+    <None Include="Resources\CONSTRAINTITEM.png" />
+    <None Include="Resources\PROPERTY.png" />
+    <None Include="Resources\PROPERTYITEM.png" />
+    <None Include="Resources\CRANKSHAFT.png" />
+    <None Include="Resources\DETAILWITHANALYSIS.png" />
+    <None Include="Resources\CYLINDER.png" />
+    <Content Include="Resources\SAVE.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

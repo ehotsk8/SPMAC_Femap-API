@@ -1,0 +1,6 @@
+D:\hm\Other2\РЫЖЕНКОВ_А_Н\ПРИЛОЖЕНИЯ\Программное обеспечение\SPMAC for Femap\SPMAC for Femap\bin\Debug\SPMAC for Femap.exe.config
+D:\hm\Other2\РЫЖЕНКОВ_А_Н\ПРИЛОЖЕНИЯ\Программное обеспечение\SPMAC for Femap\SPMAC for Femap\obj\Debug\Interop.Office.dll
+D:\hm\Other2\РЫЖЕНКОВ_А_Н\ПРИЛОЖЕНИЯ\Программное обеспечение\SPMAC for Femap\SPMAC for Femap\obj\Debug\SPMAC for Femap.csproj.ResolveComReference.cache
+C:\Users\ehots\Desktop\SPMAC_Femap-API\SPMAC for Femap\bin\Debug\SPMAC for Femap.exe.config
+C:\Users\ehots\Desktop\SPMAC_Femap-API\SPMAC for Femap\obj\Debug\Interop.Office.dll
+C:\Users\ehots\Desktop\SPMAC_Femap-API\SPMAC for Femap\obj\Debug\SPMAC for Femap.csproj.ResolveComReference.cache
